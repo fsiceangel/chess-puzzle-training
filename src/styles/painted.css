@@ -1,0 +1,35 @@
+/* The painted storybook set. The sprites carry their own colour and shading,
+   so the only job here is the board they stand on and how the image sits in
+   the square. */
+
+.pc-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* the pieces are pre-trimmed to a shared baseline, so no per-piece nudging */
+  filter: drop-shadow(0 2px 2px rgba(58, 44, 32, 0.3));
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.board-painted .sq {
+  background-image: radial-gradient(circle at 32% 26%, rgba(255, 255, 255, 0.34), transparent 66%);
+}
+
+.board-painted .dot {
+  background: rgba(62, 52, 36, 0.26);
+}
+
+.board-painted .dot-capture {
+  box-shadow: inset 0 0 0 6px rgba(62, 52, 36, 0.24);
+}
+
+.board-painted .board-files,
+.board-painted .board-ranks {
+  color: rgba(62, 52, 36, 0.55);
+}
+
+.board-painted .promo-btn {
+  background: var(--sq-light);
+}

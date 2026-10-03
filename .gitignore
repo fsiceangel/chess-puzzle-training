@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.local
+tools/art/out/
+tools/art/out_stickers/
+tools/art/out_room/
+
+# Local reference material; never publish original books or extraction scratch files.
+private-reference/
+public/book/*.pdf
+tmp/pdfs/
+tmp/
+*.sav
+.env
+.env.*
+tools/art/ref_*.png

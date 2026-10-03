@@ -1,0 +1,15 @@
+.companion-evolution { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 7px; width: 100%; }
+.evolution-form { position: relative; min-width: 0; margin: 0; padding: 6px 0 9px; border: 1px solid #d9d6bf; border-radius: 12px; background: linear-gradient(155deg,#f6f0dc,#e6e9d8); }
+.evolution-form + .evolution-form::before { content: '›'; position: absolute; left: -9px; top: 35%; z-index: 1; color: #8b7746; font: 23px Georgia,serif; }
+.evolution-current { border-color: #81996d; box-shadow: inset 0 0 0 1px #81996d; background: linear-gradient(155deg,#f4eed9,#d7e0c9); }
+.evolution-art { display: block; width: 100%; height: auto; overflow: hidden; }
+.evolution-form figcaption { text-align: center; padding: 7px 3px 0; }
+.evolution-form strong { display: block; font: 700 12px/1.35 var(--font-body); min-height: 2.7em; }
+.evolution-form figcaption span { display: block; margin-top: 4px; font-size: 10px; color: #6c725b; }
+.shop-grid.shop-grid-pets { grid-template-columns: repeat(auto-fit,minmax(min(100%,380px),1fr)); }
+.shop-card-pets .shop-preview { height: auto; overflow: visible; background: none; }
+.shop-card-pets .evolution-art img { max-height: none; }
+.companions-review { scroll-margin-top: 24px; }
+.companions-review-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; margin: 20px 0; }
+.companions-review-grid h3 { margin-bottom: 10px; }
+@media (max-width:620px) { .companions-review-grid { grid-template-columns: 1fr; } .evolution-form strong { font-size: 11px; } }

@@ -1,0 +1,85 @@
+:root {
+  --paper: #fbf7f0;
+  --card: #ffffff;
+  --ink: #2d2a32;
+  --ink-soft: #6e6875;
+  --line: #eae2d8;
+  --line-strong: #d8cec1;
+
+  --coral: #e76f51;
+  --coral-deep: #c9563b;
+  --coral-soft: #fbeae3;
+  --teal: #2a9d8f;
+  --teal-deep: #1f7a70;
+  --teal-soft: #e2f1ef;
+  --violet: #7c6ff0;
+  --violet-deep: #5f53c7;
+  --violet-soft: #ecebfc;
+  --amber: #cf8020;
+  --amber-deep: #a2600f;
+  --amber-soft: #fbeed8;
+  --green: #3e9b5f;
+  --green-deep: #2f7a4a;
+  --green-soft: #e7f4ec;
+  --blue: #3b82c4;
+  --blue-deep: #2a639a;
+  --blue-soft: #e3eef8;
+
+  --gold: #f4a93d;
+  --rose-soft: #fbe7e2;
+
+  /* board */
+  --sq-light: #f0d9b5;
+  --sq-dark: #b58863;
+  --sq-select: #ffd45e;
+  --sq-last: #f5e07a;
+  --sq-good: #6fcf97;
+  --sq-bad: #ef7a6d;
+  --piece-white: #fdfbf7;
+  --piece-white-edge: #4a4048;
+  --piece-black: #454049;
+  --piece-black-edge: #211e26;
+
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow-sm: 0 1px 2px rgba(45, 42, 50, 0.06), 0 2px 8px rgba(45, 42, 50, 0.05);
+  --shadow-md: 0 2px 4px rgba(45, 42, 50, 0.07), 0 12px 28px rgba(45, 42, 50, 0.09);
+
+  --font-display: 'Baloo 2', system-ui, sans-serif;
+  --font-body: 'Nunito Sans', system-ui, sans-serif;
+
+  --accent: var(--teal);
+  --accent-deep: var(--teal-deep);
+  --accent-soft: var(--teal-soft);
+}
+
+.accent-coral {
+  --accent: var(--coral);
+  --accent-deep: var(--coral-deep);
+  --accent-soft: var(--coral-soft);
+}
+.accent-teal {
+  --accent: var(--teal);
+  --accent-deep: var(--teal-deep);
+  --accent-soft: var(--teal-soft);
+}
+.accent-violet {
+  --accent: var(--violet);
+  --accent-deep: var(--violet-deep);
+  --accent-soft: var(--violet-soft);
+}
+.accent-amber {
+  --accent: var(--amber);
+  --accent-deep: var(--amber-deep);
+  --accent-soft: var(--amber-soft);
+}
+.accent-green {
+  --accent: var(--green);
+  --accent-deep: var(--green-deep);
+  --accent-soft: var(--green-soft);
+}
+.accent-blue {
+  --accent: var(--blue);
+  --accent-deep: var(--blue-deep);
+  --accent-soft: var(--blue-soft);
+}

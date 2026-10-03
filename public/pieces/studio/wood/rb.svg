@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none">
+<title>Black r · wood</title>
+<defs>
+ <linearGradient id="body" x1="28" y1="25" x2="67" y2="45" gradientUnits="userSpaceOnUse"><stop stop-color="#67472f"/><stop offset=".22" stop-color="#b18a59"/><stop offset=".47" stop-color="#67472f"/><stop offset=".77" stop-color="#67472f"/><stop offset="1" stop-color="#392a20"/></linearGradient>
+ <linearGradient id="rim" x2="0" y2="1"><stop stop-color="#b18a59"/><stop offset=".45" stop-color="#67472f"/><stop offset="1" stop-color="#392a20"/></linearGradient>
+ <clipPath id="shape"><path d="M32 66 L35 37 L28 33 L28 17 L37 17 L37 25 L43 25 L43 17 L52 17 L52 25 L58 25 L58 17 L67 17 L67 33 L60 37 L63 66 Z"/><path d="M31 66 Q48 63 65 66 L65 71 L71 79 L71 85 Q48 91 25 85 L25 79 L31 71 Z"/></clipPath>
+ <pattern id="grain" width="15" height="32" patternUnits="userSpaceOnUse"><path d="M2-5 Q11 9 4 19 T7 40 M10-5 Q17 9 11 25" stroke="#211c17" stroke-width=".65" opacity=".18" fill="none"/></pattern>
+ <pattern id="dots" width="4" height="4" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".65" fill="#211c17" opacity=".18"/></pattern>
+</defs>
+<ellipse cx="48" cy="88" rx="25" ry="4" fill="#30291f" opacity=".16"/>
+<g stroke="#211c17" stroke-width="1.45" stroke-linejoin="round">
+ <path d="M32 66 L35 37 L28 33 L28 17 L37 17 L37 25 L43 25 L43 17 L52 17 L52 25 L58 25 L58 17 L67 17 L67 33 L60 37 L63 66 Z" fill="url(#body)"/>
+ 
+ 
+ 
+ <path d="M34 36 L61 36 M39 41 L38 59 M57 41 L58 59" stroke-width="1" opacity=".55"/>
+ 
+ <path d="M31 66 Q48 63 65 66 L65 71 L71 79 L71 85 Q48 91 25 85 L25 79 L31 71 Z" fill="url(#body)"/>
+ <path d="M31 67 Q48 70 65 67 M28 78 Q48 83 68 78 M27 84 Q48 88 69 84" stroke="#211c17" stroke-width="1.2" opacity=".75"/>
+ <path d="M32 71 Q48 75 64 71 M29 79 Q44 82 56 81" stroke="#b18a59" stroke-width="1.4" opacity=".85"/>
+</g>
+<g clip-path="url(#shape)">
+ <rect width="96" height="96" fill="url(#grain)"/>
+ 
+ 
+ 
+ 
+ 
+ 
+</g>
+
+
+
+</svg>

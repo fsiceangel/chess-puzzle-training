@@ -1,0 +1,46 @@
+/* Shared art direction: parchment, aged oak, sage and muted brass. */
+:root {
+  --paper: #f4f0e4;
+  --card: #fffdf5;
+  --ink: #353c30;
+  --ink-soft: #747566;
+  --line: #e1ddcc;
+  --line-strong: #c9c5b0;
+  --teal: #64846b;
+  --teal-deep: #435e49;
+  --teal-soft: #e6ebde;
+  --amber: #af8441;
+  --amber-deep: #84602d;
+  --amber-soft: #efe5cc;
+  --coral: #bd7c65;
+  --coral-deep: #995940;
+  --coral-soft: #f2e4d9;
+  --violet: #8b819a;
+  --violet-deep: #6b617a;
+  --violet-soft: #ece7ef;
+  --blue: #688794;
+  --blue-deep: #466572;
+  --blue-soft: #e2ebea;
+  --green: #748c59;
+  --green-deep: #526d3b;
+  --green-soft: #e7eddd;
+  --gold: #c5a05c;
+  --shadow-sm: 0 2px 8px #50422e09;
+  --shadow-md: 0 4px 6px #50422e08, 0 14px 32px #50422e12;
+}
+body { background-image: radial-gradient(ellipse at 15% 0,#fffdf4 0,transparent 60%); }
+.app-header { background: #faf7edee; border-bottom-color: #d9d6c3; }
+.room { border: 5px solid #e5d6b9; box-shadow: 0 0 0 1px #b9a07a, 0 14px 32px #50422e1a; }
+.room-item { aspect-ratio: 1; filter: drop-shadow(0 2px 1px #49362225); }
+.shop-card { background: #fffdf5; border-color: #ded9c6; }
+.shop-preview { background: radial-gradient(ellipse at 45% 40%,#faf6e6,#ece9d9); border-radius: 12px; }
+.piece-family { display: grid; grid-template-columns: repeat(6,1fr); width: 100%; max-width: 264px; padding: 6px; border-radius: 10px; background: linear-gradient(#a5b098 50%,#c9c2a9 50%); }
+.piece-family .pc-art { width: 100%; height: auto; aspect-ratio: 1; filter: none; min-width: 0; }
+.board-t-sand { --sq-light: #e4d5b5; --sq-dark: #92a183; --frame: linear-gradient(135deg,#b99a6c,#806341); --frame-shadow: 0 2px 0 #6b5336,0 12px 26px #4a3b292b; }
+.board-painted .sq { background-image: linear-gradient(115deg,#fff5dc16,transparent 65%); }
+.board-wrap { padding: 12px; border-radius: 12px; }
+.board { border-radius: 5px; }
+.pc-art { filter: none; }
+.board-painted .board-files,.board-painted .board-ranks { color: #334331a8; }
+.board-t-night .board-files,.board-t-night .board-ranks { color: #fff7d7b3; }
+@media (max-width:620px) { .board-wrap { padding: 7px; } .room { border-width: 3px; } }

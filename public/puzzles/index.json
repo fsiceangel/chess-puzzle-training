@@ -1,0 +1,47 @@
+{
+  "builtAt": "2026-09-04",
+  "parts": [
+    {
+      "id": "mate-in-one",
+      "count": 306,
+      "pool": 56983,
+      "ratingLow": 411,
+      "ratingHigh": 1150
+    },
+    {
+      "id": "mate-in-two",
+      "count": 3412,
+      "pool": 167551,
+      "ratingLow": 700,
+      "ratingHigh": 1650
+    },
+    {
+      "id": "mate-in-three",
+      "count": 744,
+      "pool": 61979,
+      "ratingLow": 1000,
+      "ratingHigh": 1948
+    },
+    {
+      "id": "mating-attacks",
+      "count": 600,
+      "pool": 14069,
+      "ratingLow": 1200,
+      "ratingHigh": 2148
+    },
+    {
+      "id": "endgames",
+      "count": 144,
+      "pool": 106652,
+      "ratingLow": 700,
+      "ratingHigh": 1696
+    },
+    {
+      "id": "combinations",
+      "count": 128,
+      "pool": 355582,
+      "ratingLow": 800,
+      "ratingHigh": 1744
+    }
+  ]
+}

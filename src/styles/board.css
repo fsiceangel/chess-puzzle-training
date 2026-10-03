@@ -1,0 +1,233 @@
+.board-wrap {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.board {
+  position: relative;
+  aspect-ratio: 1;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.board-dragging {
+  cursor: grabbing;
+}
+
+.board-squares {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+
+.sq {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.sq-light {
+  background: var(--sq-light);
+}
+.sq-dark {
+  background: var(--sq-dark);
+}
+
+/* Highlights sit on top of the square colour rather than replacing it, so a
+   selected dark square still reads as a dark square. */
+.sq::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.14s ease;
+  pointer-events: none;
+}
+.sq-last::after {
+  background: var(--sq-last);
+  opacity: 0.5;
+}
+.sq-sel::after {
+  background: var(--sq-select);
+  opacity: 0.62;
+}
+.sq-hint::after {
+  background: var(--sq-select);
+  opacity: 0.72;
+  box-shadow: inset 0 0 0 4px color-mix(in srgb, var(--amber-deep) 70%, transparent);
+}
+.sq-good::after {
+  background: var(--sq-good);
+  opacity: 0.72;
+}
+.sq-bad::after {
+  background: var(--sq-bad);
+  opacity: 0.75;
+}
+.sq-check::after {
+  background: radial-gradient(circle, var(--sq-bad) 20%, transparent 72%);
+  opacity: 0.95;
+}
+
+.dot {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background: rgba(30, 26, 34, 0.28);
+  pointer-events: none;
+}
+
+.dot-capture {
+  width: 92%;
+  height: 92%;
+  background: none;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 6px rgba(30, 26, 34, 0.26);
+}
+
+.board-pieces {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.pc-slot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12.5%;
+  height: 12.5%;
+  transition: transform 0.19s cubic-bezier(0.22, 0.7, 0.3, 1);
+  will-change: transform;
+}
+
+.pc-drag {
+  z-index: 30;
+  transform-origin: center;
+}
+
+.pc-drag .pc {
+  transform: scale(1.12);
+  filter: drop-shadow(0 6px 8px rgba(30, 26, 34, 0.35));
+}
+
+.pc {
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 1px 1px rgba(30, 26, 34, 0.28));
+}
+
+/* coordinates */
+
+.board-files,
+.board-ranks {
+  position: absolute;
+  display: flex;
+  font-family: var(--font-display);
+  font-size: clamp(9px, 1.6vw, 12px);
+  font-weight: 700;
+  pointer-events: none;
+  color: rgba(45, 36, 28, 0.55);
+}
+
+.board-files {
+  bottom: 1px;
+  left: 0;
+  right: 0;
+}
+
+.board-files span {
+  flex: 1;
+  text-align: right;
+  padding-right: 3px;
+}
+
+.board-ranks {
+  flex-direction: column;
+  top: 0;
+  bottom: 0;
+  left: 2px;
+}
+
+.board-ranks span {
+  flex: 1;
+}
+
+/* promotion chooser */
+
+.promo-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(35, 30, 38, 0.55);
+  display: grid;
+  place-items: center;
+  z-index: 40;
+}
+
+.promo-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.promo-card p {
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.promo-row {
+  display: flex;
+  gap: 6px;
+}
+
+.promo-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: var(--sq-light);
+  display: grid;
+  place-items: center;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+
+.promo-btn:hover {
+  transform: translateY(-2px);
+  background: var(--sq-select);
+}
+
+/* a solved board gives a short green glow */
+
+.board-won .board {
+  animation: won 0.7s ease;
+}
+
+@keyframes won {
+  0%,
+  100% {
+    box-shadow: var(--shadow-md);
+  }
+  40% {
+    box-shadow: 0 0 0 5px var(--sq-good), var(--shadow-md);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pc-slot {
+    transition: none;
+  }
+  .board-won .board {
+    animation: none;
+  }
+}
